@@ -13,4 +13,4 @@ phases:
             - npm run build
     post_build:
         commands:
-            - aws codebuild-sample-pangwoo sync ./dist codebuild-sample-pangwoo://codebuild-sample-test
+            - aws s3 sync ./dist s3://codebuild-sample-pangwoo
